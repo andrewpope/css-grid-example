@@ -1,0 +1,70 @@
+.app {
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "nav content"
+    "footer footer";
+
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 5px;
+
+  height: 100vh;
+}
+
+/*@media (max-width: 500px) {
+  .app {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+}*/
+
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: #fefefe;
+}
+
+.nav {
+  grid-area: nav;
+  background: #eee;
+}
+
+.main {
+  grid-area: content;
+  background: #eee;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: #fefefe;
+  font-size: 0.8em;
+}
+
+.layout-padding {
+  padding: 20px;
+}
+
+.logo-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: self;
+}
+
+.app-logo {
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
